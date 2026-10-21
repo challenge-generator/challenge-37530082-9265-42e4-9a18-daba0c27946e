@@ -1,0 +1,81 @@
+{
+  "metricas_esperadas": {
+    "densidad_defectos": {
+      "descripcion": "Ratio de defectos encontrados versus casos ejecutados",
+      "densidad_max": 0.1,
+      "umbral_verde": 0.05,
+      "umbral_amarillo": 0.08,
+      "umbral_rojo": 0.1
+    },
+    "cobertura_ejecucion": {
+      "descripcion": "Porcentaje de casos de prueba ejecutados versus planificados",
+      "cobertura_min": 0.95,
+      "umbral_verde": 0.98,
+      "umbral_amarillo": 0.95,
+      "umbral_rojo": 0.90
+    },
+    "tasa_exitos": {
+      "descripcion": "Porcentaje de casos que pasan exitosamente",
+      "tasa_min": 0.90,
+      "umbral_verde": 0.95,
+      "umbral_amarillo": 0.92,
+      "umbral_rojo": 0.90
+    },
+    "tasa_fallidos": {
+      "descripcion": "Porcentaje de casos que fallan",
+      "tasa_max": 0.10,
+      "umbral_verde": 0.05,
+      "umbral_amarillo": 0.08,
+      "umbral_rojo": 0.10
+    },
+    "estabilidad_sistema": {
+      "descripcion": "Índice de estabilidad basado en re-ejecuciones de casos fallidos",
+      "estabilidad_min": 0.85,
+      "umbral_verde": 0.90,
+      "umbral_amarillo": 0.87,
+      "umbral_rojo": 0.85
+    },
+    "tiempo_resolucion": {
+      "descripcion": "Tiempo promedio en días para resolver defectos",
+      "tiempo_max_dias": 5,
+      "umbral_verde": 3,
+      "umbral_amarillo": 4,
+      "umbral_rojo": 5
+    }
+  },
+  "escenarios_prueba": [
+    {
+      "id": "ESC-001",
+      "nombre": "Ejecucion normal de pruebas",
+      "casos_ejecutados": 100,
+      "casos_planificados": 100,
+      "defectos_encontrados": 5,
+      "casos_exitosos": 95,
+      "casos_fallidos": 5,
+      "re_ejecuciones": 3,
+      "tiempo_promedio_resolucion_dias": 2
+    },
+    {
+      "id": "ESC-002",
+      "nombre": "Alta densidad de defectos",
+      "casos_ejecutados": 50,
+      "casos_planificados": 50,
+      "defectos_encontrados": 8,
+      "casos_exitosos": 42,
+      "casos_fallidos": 8,
+      "re_ejecuciones": 5,
+      "tiempo_promedio_resolucion_dias": 6
+    },
+    {
+      "id": "ESC-003",
+      "nombre": "Baja cobertura con muchos pendientes",
+      "casos_ejecutados": 60,
+      "casos_planificados": 100,
+      "defectos_encontrados": 3,
+      "casos_exitosos": 57,
+      "casos_fallidos": 3,
+      "re_ejecuciones": 1,
+      "tiempo_promedio_resolucion_dias": 3
+    }
+  ]
+}
